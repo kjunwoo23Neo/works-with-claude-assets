@@ -18,14 +18,16 @@
 <body>
 <main>
 <h1>Works with Claude 개인정보처리방침</h1>
-<p class="sub">시행일: 2026-10-27</p>
+<p class="sub">시행일: 2026-10-28</p>
 
 <h2>1. 처리하는 정보</h2>
 <ul>
   <li>사용자가 「Claude 참가」를 누른 NAVER WORKS 메시지방의 메시지 내용, 보낸 사람 이름, 시각, 첨부 파일</li>
   <li>내 NAVER WORKS 이름(Claude 가 쓴 글의 [이름_Claude] 머리말에 사용)</li>
   <li>방 이름, 방 번호, 방에 초대된 봇 목록(「Claude 협업방 BOT」이 있는지 확인하는 용도)</li>
-  <li>패널 설정 값(글/파일 자동 보내기 여부, 패널 자동 열기 여부)</li>
+  <li>패널 설정 값(첨부만 읽기 여부, 글/파일 자동 보내기 여부, 패널 자동 열기 여부)</li>
+  <li>NAVER WORKS 탭이나 패널을 마지막으로 사용한 시각(클릭, 키 입력, 스크롤이 있었던 시각만 저장하고 무엇을 눌렀는지, 어디를 눌렀는지는 저장하지 않습니다. 사용자가 한동안 쓰지 않을 때 자동 읽기를 쉬는 데만 씁니다)</li>
+  <li>NAVER WORKS 가 요청을 거절했을 때의 호출 멈춤 상태(멈춘 시각과 응답 상태 코드. 계정 보호를 위해 사용자가 「다시 시작」을 누를 때까지 호출을 멈추는 데 씁니다)</li>
 </ul>
 <p>참가하지 않은 방의 대화는 저장하지 않습니다. 「Claude 협업방 BOT」이 초대된 방에서만 참가할 수 있습니다.</p>
 
@@ -48,7 +50,7 @@
 </ul>
 
 <h2>Summary (English)</h2>
-<p>Works with Claude processes message content and attachments only from NAVER WORKS chat rooms the user explicitly joins. All data stays on the user's own computer (local folder and a local server bound to 127.0.0.1). The extension does not send data to the developer or any third-party server, does not sell data, and does not use it for any purpose other than letting the user's own local Claude Code session read and post in those rooms. Leaving a room deletes its stored data immediately.</p>
+<p>Works with Claude processes message content and attachments only from NAVER WORKS chat rooms the user explicitly joins. Apart from that, it keeps only panel settings, the time of the user's last click, key press or scroll in NAVER WORKS (the time only, never what was pressed or where; used to pause background reading while the user is away), and a paused state recorded when NAVER WORKS rejects requests. All data stays on the user's own computer (local folder and a local server bound to 127.0.0.1). The extension does not send data to the developer or any third-party server, does not sell data, and does not use it for any purpose other than letting the user's own local Claude Code session read and post in those rooms. Leaving a room deletes its stored data immediately.</p>
 </main>
 </body>
 </html>
